@@ -1,0 +1,35 @@
+# ----- Credits ----- #
+# this script was written by ezio.
+# its content is written in german.
+# for other languages please check out the github page.
+# you can contact me via discord (the_ezio_)
+# ----- Credits ----- #
+
+
+command /heal [<player>]:
+	permission: ezio.skript.heal
+	permission message: &7Du hast &ckeinen&7 Zugriff auf diesen Befehl.
+	usage: &7Mit &e/heal&7 kannst du dich und andere Spieler heilen. Allerdings sieht es so aus, als hättest du den Befehl nicht richtig genutzt. Bitte versuche es erneut, mit dem Syntax: &e/heal <player>&7.
+    trigger:
+        if arg-1 is set:
+            set arg-1's health to arg-1's maximum health
+            send "&aDu wurdest geheilt." to arg-1
+        else:
+            set player's health to player's maximum health
+            send "&aDu wurdest geheilt."
+
+
+
+# Dieses Skript beinhaltet eine einfache Umsetzung eines /heal-Befehls in der Skript-Sprache.
+#
+# Um die Nachricht zu ändern, welche durch fehlerhafte Berechtigungen gesendet wird, muss der nachfolgende Text hinter "permission message:" geändert werden. Dieser Text benötigt keine Anführungszeichen.
+# Um die Nachricht zu ändern, welche nach dem fehlerhaften Benutzen des Befehls gesendet wird, muss der nachfolgende Text hinter "usage:" geändert werden. Dieser Text benötigt keine Anführungszeichen.
+# Um die Nachrichten zu ändern, welche nach dem erfolgreichen Benutzen des Befehls gesendet werden, muss der nachfolgende Text hinter "send" geändert werden. Dieser Text benötigt Anführungszeichen.
+#
+# Alle Command-Outputs (egal ob erfolgreich oder fehlerhaft) unterstützen Minecraft-Farbcodes. (Siehe https://de.minecraft.wiki/w/Formatierungscodes#Farbcodes)
+#
+# Um die reibungslose Funktionalität dieses Skripts zu garantieren, muss der Syntax unverändert bleiben.
+# Um weitere Informationen über die Skript-Programmiersprache zu erhalten, besuche https://docs.skriptlang.org/.
+#
+# Support und Unterstützung vom Entwickler dieses Skripts erhältst du über Discord.
+# Danke für deine Unterstützung.
