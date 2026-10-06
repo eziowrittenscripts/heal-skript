@@ -1,0 +1,39 @@
+# ----- Credits ----- #
+# this script was written by ezio.
+# its content is written in english.
+# for other languages please check out the github page.
+# you can contact me via discord (the_ezio_)
+# ----- Credits ----- #
+
+
+command /heal [<player>]:
+	permission: ezio.skript.heal
+	permission message: &7You &cdon't&7 have permission to use this command.
+	usage: &7Use &e/heal&7 to heal yourself or another player. However, it looks like you didn't use the command correctly. Please try again using the syntax: &e/heal <player>&7.
+    trigger:
+        if arg-1 is set:
+            set arg-1's health to arg-1's maximum health
+            send "&aYou have been healed." to arg-1
+        else:
+            set player's health to player's maximum health
+            send "&aYou have been healed."
+
+
+# This script contains a simple implementation of a /heal command in the Skript language.
+#
+# To change the message displayed when the player does not have the required permission,
+# change the text after "permission message:" below. This text does not require quotation marks.
+# To change the message displayed when the command is used incorrectly,
+# change the text after "usage:" below. This text does not require quotation marks.
+# To change the messages displayed after successfully using the command,
+# change the text after "send" below. These messages require quotation marks.
+#
+# All command outputs (whether successful or unsuccessful) support Minecraft color codes.
+# See: https://minecraft.wiki/w/Formatting_codes
+#
+# To ensure the smooth functionality of this script, the syntax must remain unchanged.
+# For more information about the Skript programming language, visit:
+# https://docs.skriptlang.org/
+#
+# Support and assistance from the developer of this script is available via Discord.
+# Thank you for your support.
